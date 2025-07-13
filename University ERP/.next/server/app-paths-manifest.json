@@ -1,0 +1,12 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/academics/timetable/page": "app/academics/timetable/page.js",
+  "/page": "app/page.js",
+  "/finance/fee-details/page": "app/finance/fee-details/page.js",
+  "/finance/fee-payment/page": "app/finance/fee-payment/page.js",
+  "/academics/attendance/page": "app/academics/attendance/page.js",
+  "/exams/earlier-results/page": "app/exams/earlier-results/page.js",
+  "/transport-hostel/requests/page": "app/transport-hostel/requests/page.js",
+  "/exams/current-results/page": "app/exams/current-results/page.js",
+  "/transport-hostel/route-details/page": "app/transport-hostel/route-details/page.js"
+}

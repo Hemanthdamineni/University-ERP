@@ -1,0 +1,100 @@
+{
+  "pages": {
+    "/_not-found": [
+      "static/chunks/webpack-f4fc487c96fb4568.js",
+      "static/chunks/fd9d1056-39784d4f57ff46ed.js",
+      "static/chunks/472-502f1caacd71b866.js",
+      "static/chunks/main-app-0cf49896784723e0.js",
+      "static/chunks/app/_not-found-ec5408eef9e85e3e.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-f4fc487c96fb4568.js",
+      "static/chunks/fd9d1056-39784d4f57ff46ed.js",
+      "static/chunks/472-502f1caacd71b866.js",
+      "static/chunks/main-app-0cf49896784723e0.js",
+      "static/css/cdaf0f38fd6fafe9.css",
+      "static/chunks/app/layout-73c7c253de7a7e63.js"
+    ],
+    "/academics/timetable/page": [
+      "static/chunks/webpack-f4fc487c96fb4568.js",
+      "static/chunks/fd9d1056-39784d4f57ff46ed.js",
+      "static/chunks/472-502f1caacd71b866.js",
+      "static/chunks/main-app-0cf49896784723e0.js",
+      "static/chunks/177-a341b3297f129d56.js",
+      "static/chunks/630-e3f433b551b2ee10.js",
+      "static/chunks/app/academics/timetable/page-b43786d7931ddf15.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-f4fc487c96fb4568.js",
+      "static/chunks/fd9d1056-39784d4f57ff46ed.js",
+      "static/chunks/472-502f1caacd71b866.js",
+      "static/chunks/main-app-0cf49896784723e0.js",
+      "static/chunks/177-a341b3297f129d56.js",
+      "static/chunks/905-5ac18ac59526ad93.js",
+      "static/chunks/230-11026da327871d1a.js",
+      "static/chunks/630-e3f433b551b2ee10.js",
+      "static/chunks/app/page-96d8b0bcb707f480.js"
+    ],
+    "/finance/fee-details/page": [
+      "static/chunks/webpack-f4fc487c96fb4568.js",
+      "static/chunks/fd9d1056-39784d4f57ff46ed.js",
+      "static/chunks/472-502f1caacd71b866.js",
+      "static/chunks/main-app-0cf49896784723e0.js",
+      "static/chunks/177-a341b3297f129d56.js",
+      "static/chunks/630-e3f433b551b2ee10.js",
+      "static/chunks/app/finance/fee-details/page-d2d4cf3f4907c9bc.js"
+    ],
+    "/finance/fee-payment/page": [
+      "static/chunks/webpack-f4fc487c96fb4568.js",
+      "static/chunks/fd9d1056-39784d4f57ff46ed.js",
+      "static/chunks/472-502f1caacd71b866.js",
+      "static/chunks/main-app-0cf49896784723e0.js",
+      "static/chunks/177-a341b3297f129d56.js",
+      "static/chunks/630-e3f433b551b2ee10.js",
+      "static/chunks/app/finance/fee-payment/page-9128403102ad3a64.js"
+    ],
+    "/academics/attendance/page": [
+      "static/chunks/webpack-f4fc487c96fb4568.js",
+      "static/chunks/fd9d1056-39784d4f57ff46ed.js",
+      "static/chunks/472-502f1caacd71b866.js",
+      "static/chunks/main-app-0cf49896784723e0.js",
+      "static/chunks/177-a341b3297f129d56.js",
+      "static/chunks/630-e3f433b551b2ee10.js",
+      "static/chunks/app/academics/attendance/page-0fb43e8b168d78eb.js"
+    ],
+    "/exams/earlier-results/page": [
+      "static/chunks/webpack-f4fc487c96fb4568.js",
+      "static/chunks/fd9d1056-39784d4f57ff46ed.js",
+      "static/chunks/472-502f1caacd71b866.js",
+      "static/chunks/main-app-0cf49896784723e0.js",
+      "static/chunks/177-a341b3297f129d56.js",
+      "static/chunks/905-5ac18ac59526ad93.js",
+      "static/chunks/779-70002e081b64a56b.js",
+      "static/chunks/630-e3f433b551b2ee10.js",
+      "static/chunks/app/exams/earlier-results/page-1594ccb08370a853.js"
+    ],
+    "/transport-hostel/requests/page": [
+      "static/chunks/webpack-f4fc487c96fb4568.js",
+      "static/chunks/fd9d1056-39784d4f57ff46ed.js",
+      "static/chunks/472-502f1caacd71b866.js",
+      "static/chunks/main-app-0cf49896784723e0.js",
+      "static/chunks/app/transport-hostel/requests/page-a6cb8e028b2a7ecc.js"
+    ],
+    "/exams/current-results/page": [
+      "static/chunks/webpack-f4fc487c96fb4568.js",
+      "static/chunks/fd9d1056-39784d4f57ff46ed.js",
+      "static/chunks/472-502f1caacd71b866.js",
+      "static/chunks/main-app-0cf49896784723e0.js",
+      "static/chunks/177-a341b3297f129d56.js",
+      "static/chunks/630-e3f433b551b2ee10.js",
+      "static/chunks/app/exams/current-results/page-29914a6bfa349305.js"
+    ],
+    "/transport-hostel/route-details/page": [
+      "static/chunks/webpack-f4fc487c96fb4568.js",
+      "static/chunks/fd9d1056-39784d4f57ff46ed.js",
+      "static/chunks/472-502f1caacd71b866.js",
+      "static/chunks/main-app-0cf49896784723e0.js",
+      "static/chunks/app/transport-hostel/route-details/page-7f4d2c60333e0f1a.js"
+    ]
+  }
+}
