@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-background);
+}
+
+.LoginPageContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-background);
+}
+
+.LoginPageBodyContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+footer {
+  margin-top: auto;
+}

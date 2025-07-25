@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+.LoginFormContainer {
+    width: 400px;
+    border-radius: 12px;
+    background-color: var(--color-surface);
+    margin: 10px 20px;
+}
+
+.TitleContainer {
+    background-color: var(--color-primary);
+    border-radius: 10px 10px 0  0;
+    padding: 10px;
+}
+
+.TitleContainer-1 {
+    color: var(--color-text-primary);
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.TitleContainer-2 {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    opacity: 0.8;
+    margin: 5px;
+}
+
+.LoginForm {
+    padding: 20px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.RequiredIcon {
+    color: var(--color-error);
+    font-size: 14px;
+}
+
+.FormGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.InputsContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.FormInput {
+    border: 0px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.FormInput:focus {
+  outline: none;
+}
+
+.CaptchaContainer {
+    display: flex;
+    align-items: center;
+    border: 1px var(--color-border) solid;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.CaptchaImage {
+    width: 120px;
+    height: 34px;
+    object-fit: cover;
+    object-position: 5% 10%;
+    border-right: 1px var(--color-border) solid;
+    filter: brightness(100%) contrast(1.2);
+}
+
+.CaptchaInput {
+    border: 0px;
+    border-left: 1px var(--color-border) solid;
+    height: 34px;
+    padding-left: 10px;
+    outline: none;
+    background-color: transparent;
+}
+
+.CaptchaReloadIcon {
+    padding: 6px;
+}
+
+.AdditionalOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.RememberMe {
+    display: flex;
+    align-items: center;
+}
+
+.RememberMeInput:checked {
+    accent-color: var(--color-primary);
+}
+
+.ForgotPassword {
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.SubmitButton {
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}

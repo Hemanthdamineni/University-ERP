@@ -1,0 +1,66 @@
+/* ===== Light Theme ===== */
+:root {
+  /* === Brand / University === */
+  --color-primary: #494623;
+  
+  /* === UI Theme Colors === */
+  --color-background: #FFFFFF;
+  --color-surface: #F8F7F7;
+  --color-border: #C1BFBF;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #aaaaaa;
+  --color-text-dark: #000000;
+
+  /* === Accent / Main Colors === */
+  --color-accent-blue: #34AEBE;
+  --color-accent-green: #33A33F;
+  --color-accent-yellow: #DDE03C;
+  --color-accent-orange: #FFB906;
+
+  /* === Fonts === */
+  font-family: 'Roboto', 'Inter';
+
+  /* === Status / Feedback (Optional Enhancements) === */
+  --color-success: #33A33F;
+  --color-warning: #FFB906;
+  --color-error: #D32F2F;
+  --color-info: #34AEBE;
+
+  /* === Utility === */
+  --color-white: #FFFFFF;
+  --color-gray: #C1BFBF;
+  --color-light: #F8F7F7;
+}
+
+
+/* ===== Dark Theme ===== */
+[data-theme="dark"] {
+  --color-background: #0A272B;
+  --color-surface: #0B3035;
+  --color-border: #444;
+
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #C1BFBF;
+
+  /* Same accents but can be adjusted for better contrast if needed */
+  --color-accent-blue: #34AEBE;
+  --color-accent-green: #33A33F;
+  --color-accent-yellow: #DDE03C;
+  --color-accent-orange: #FFB906;
+
+  /* Feedback Colors (dark mode adjustments) */
+  --color-success: #66BB6A;
+  --color-warning: #FFCA28;
+  --color-error: #EF5350;
+  --color-info: #4FC3F7;
+}
+
+/* Mobile devices */ 
+/* @media (max-width: 600px) { ... } */
+
+/* Tablets */
+/* @media (max-width: 900px) { ... } */
+
+/* Small laptops/desktops */
+/* @media (max-width: 1200px) { ... } */
