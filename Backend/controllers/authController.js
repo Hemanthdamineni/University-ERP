@@ -1,6 +1,7 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
+const { captchaSessions } = require('./captchaController');
 
 const BASE_URL = 'https://student.srmap.edu.in/srmapstudentcorner';
 const START_URL = `${BASE_URL}/StudentLoginPage`;
@@ -25,13 +26,10 @@ const BUTTON_WHITELIST = [
 
 async function login(page) {
     await page.goto(START_URL);
-    await page.pause();
+    await page.getByRole('textbox', { name: 'Enter Application Number /' }).fill('');
+    await page.getByRole('textbox', { name: 'Password' }).fill('');
+    await page.getByRole('textbox', { name: 'Enter Captcha Text' }).fill('');
     await page.getByRole('button', { name: 'Login' }).click();
-    try {
-        await page.waitForSelector('#sidebar-menu', { timeout: 10000 });
-    } catch {
-        throw new Error('Login failed or sidebar did not appear.');
-    }
 }
 
 async function extractVisibleText(page) {
@@ -252,10 +250,12 @@ async function handleButtons(page, scrapedData, dropdownText, subItemText) {
 
 async function scrapeSidebarDropdownsAndSubItems(page) {
     const dropdowns = await page.$$('#sidebar-menu .side-menu > li');
+    console.log('Dropdowns found:', dropdowns.length);
     for (const li of dropdowns) {
         // Dropdown label
         const dropdownA = await li.$('> a');
         const dropdownText = (await dropdownA.textContent())?.trim();
+        console.log('Dropdown:', dropdownText);
         if (!dropdownText || visited.has(dropdownText)) continue;
         visited.add(dropdownText);
         console.log(`\n📂 Scraping dropdown: ${dropdownText}`);
@@ -305,17 +305,47 @@ async function scrapeSidebarDropdownsAndSubItems(page) {
     }
 }
 
-(async () => {
-    const browser = await chromium.launch({ headless: false}); // Headless mode
-    const page = await browser.newPage();
-
-    await login(page);
-    console.log('✅ Logged in at:', page.url());
-
+exports.login = async (req, res) => {
+  const { username, password, captcha, sessionId } = req.body;
+  if (!username || !password || !captcha || !sessionId) {
+    console.log('Missing credentials, captcha, or sessionId');
+    return res.status(400).json({ success: false, error: 'Missing credentials, captcha, or sessionId' });
+  }
+  const session = captchaSessions[sessionId];
+  if (!session) {
+    console.log('Session not found or expired');
+    return res.status(400).json({ success: false, error: 'Session not found or expired. Please reload captcha.' });
+  }
+  const { browser, page } = session;
+  try {
+    await page.getByRole('textbox', { name: 'Enter Application Number /' }).fill(username);
+    await page.getByRole('textbox', { name: 'Password' }).fill(password);
+    await page.getByRole('textbox', { name: 'Enter Captcha Text' }).fill(captcha);
+    await page.getByRole('button', { name: 'Login' }).click();
+    await page.waitForTimeout(1500);
+    const url = page.url();
+    console.log('After login, URL:', url);
+    // Check for login failure by URL or error message on page
+    const loginFailed = url.includes('StudentLoginPage') || await page.$('text=Invalid Captcha') || await page.$('text=Invalid Credentials');
+    if (loginFailed) {
+      console.log('Login failed');
+      await browser.close();
+      delete captchaSessions[sessionId];
+      return res.status(401).json({ success: false, error: 'Login failed. Check credentials or captcha.' });
+    }
+    // If login successful, run scraping
+    console.log('Login successful, starting scraping...');
     await scrapeSidebarDropdownsAndSubItems(page);
-
+    console.log('Scraping finished, writing file...');
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(scrapedData, null, 2));
-    console.log(`\n✅ Scraping complete — data saved to ${OUTPUT_FILE}`);
-
     await browser.close();
-})();
+    delete captchaSessions[sessionId];
+    console.log('Done, returning success');
+    return res.json({ success: true });
+  } catch (err) {
+    console.log('Error in login/scraping:', err);
+    await browser.close();
+    delete captchaSessions[sessionId];
+    return res.status(500).json({ success: false, error: err.message });
+  }
+};

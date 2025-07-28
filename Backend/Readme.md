@@ -3,7 +3,7 @@ File Purposes
 ├── backend/
 │   ├── controllers/
 │   │   ├── authController.js       # Handles login logic and scraping
-│   │   └── captchaController.js       # Handles Captcha fetching
+│   │   └── captchaController.js    # Fetches and returns CAPTCHA
 │   ├── routes/
 │   │   ├── authRoutes.js
 │   │   └── captchaRoutes.js
