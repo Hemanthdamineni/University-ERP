@@ -1,0 +1,1 @@
+export default function EventsFeedback() { return <div>Events Feedback</div>; } 

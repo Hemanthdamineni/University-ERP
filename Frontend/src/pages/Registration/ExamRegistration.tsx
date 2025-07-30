@@ -1,0 +1,1 @@
+export default function ExamRegistration() { return <div>Exam Registration</div>; } 

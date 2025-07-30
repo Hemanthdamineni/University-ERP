@@ -1,0 +1,1 @@
+export default function ResumeProfile() { return <div>Resume & Profile</div>; } 

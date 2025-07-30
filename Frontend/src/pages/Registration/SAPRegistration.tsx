@@ -1,0 +1,1 @@
+export default function SAPRegistration() { return <div>SAP Registration</div>; } 

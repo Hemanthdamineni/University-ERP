@@ -1,0 +1,1 @@
+export default function HostelMessFeedback() { return <div>Hostel & Mess Feedback</div>; } 

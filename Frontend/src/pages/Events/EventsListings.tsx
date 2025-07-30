@@ -1,0 +1,1 @@
+export default function EventsListings() { return <div>Events Listings</div>; } 

@@ -1,0 +1,12 @@
+.PageContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.DashboardContainer {
+  flex: 1;
+  /* Take remaining space */
+  background-color: var(--color-surface);
+  display: flex;
+}

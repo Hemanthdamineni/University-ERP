@@ -1,0 +1,1 @@
+export default function HostelRegistration() { return <div>Hostel Registration</div>; } 

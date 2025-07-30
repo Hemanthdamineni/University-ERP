@@ -1,0 +1,1 @@
+export default function AlumniConnect() { return <div>Alumni Connect</div>; } 

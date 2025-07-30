@@ -1,0 +1,1 @@
+export default function InterviewBooking() { return <div>Interview Booking</div>; } 

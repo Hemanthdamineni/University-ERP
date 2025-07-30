@@ -1,0 +1,1 @@
+export default function MinorOERegistration() { return <div>Minor / OE Registration</div>; } 

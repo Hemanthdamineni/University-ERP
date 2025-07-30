@@ -1,0 +1,1 @@
+export default function CourseRegistration() { return <div>Course Registration</div>; } 

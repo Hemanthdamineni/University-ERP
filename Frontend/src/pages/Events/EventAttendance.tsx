@@ -1,0 +1,1 @@
+export default function EventAttendance() { return <div>Event Attendance</div>; } 

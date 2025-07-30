@@ -1,3 +1,4 @@
 node_modules
 .vite
 scraped_dropdowns.json
+erp_nav_structure.json

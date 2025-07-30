@@ -1,0 +1,1 @@
+export default function AcademicInsights() { return <div>Academic Insights</div>; } 

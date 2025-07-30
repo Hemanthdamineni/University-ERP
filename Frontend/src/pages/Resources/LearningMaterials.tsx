@@ -1,0 +1,1 @@
+export default function LearningMaterials() { return <div>Learning Materials</div>; } 

@@ -1,0 +1,1 @@
+export default function CourseFeedback() { return <div>Course Feedback</div>; } 

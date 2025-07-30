@@ -1,0 +1,226 @@
+.SidebarContainer {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  min-width: 60px;
+  height: 100vh;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.07);
+  transition: width 0.3s cubic-bezier(.4, 0, .2, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+.SidebarContainer.close {
+  width: 64px;
+}
+
+.SidebarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 18px 8px 18px;
+}
+
+.NavTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.NavLogo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.NavTitleText {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.01em;
+}
+
+.SidebarToggleBtn {
+  background: #f5f6fa;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.04);
+  transition: background 0.15s;
+}
+
+.SidebarToggleBtn:hover {
+  background: #e9eaf0;
+}
+
+.SidebarToggleBtn.closed {
+  background: #e9eaf0;
+}
+
+.NavItems {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0 0 0 0;
+  margin: 0;
+}
+
+.NavItem {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 0 2px 0;
+}
+
+.NavButton,
+.NavButton:visited {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: none;
+  border: none;
+  color: #222;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  padding: 12px 22px 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+  text-decoration: none;
+}
+
+.NavButton:hover,
+.NavButton:focus {
+  background: #f5f6fa;
+  color: #3b82f6;
+}
+
+.NavItemIcon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.DropdownButton {
+  justify-content: space-between;
+}
+
+.DropdownChevron {
+  margin-left: auto;
+  transition: transform 0.2s;
+}
+
+.SubMenu {
+  padding-left: 36px;
+  background: none;
+  margin: 0;
+  transition: max-height 0.3s cubic-bezier(.4, 0, .2, 1);
+  overflow: hidden;
+}
+
+.SubMenu li {
+  margin: 0;
+}
+
+.SubMenu.Show {
+  /* For smooth open/close, you can use max-height if you want animation */
+  max-height: 500px;
+  transition: max-height 0.3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.SubMenu:not(.Show) {
+  max-height: 0;
+  transition: max-height 0.3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.NavSeparator {
+  width: 90%;
+  height: 1px;
+  background: #ececec;
+  margin: 18px auto 18px auto;
+  border-radius: 1px;
+}
+
+.NavProfile {
+  margin: 18px 0 0 0;
+  padding: 0 18px 18px 18px;
+}
+
+.ProfileButton {
+  display: flex;
+  align-items: center;
+  background: #f5f6fa;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  gap: 12px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  transition: background 0.15s;
+}
+
+.ProfileButton:hover {
+  background: #e9eaf0;
+}
+
+.ProfileLogo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ProfileText {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+}
+
+@media (max-width: 800px) {
+  .SidebarContainer {
+    width: 100vw;
+    height: 60px;
+    flex-direction: row;
+    border-radius: 0;
+  }
+
+  .SidebarHeader {
+    padding: 8px 8px 8px 8px;
+  }
+
+  .NavItems {
+    flex-direction: row;
+    width: 100vw;
+    height: 60px;
+    overflow-x: auto;
+    padding: 0;
+  }
+
+  .NavItem {
+    flex-direction: column;
+    justify-content: center;
+    height: 60px;
+    min-width: 60px;
+    padding: 0;
+  }
+
+  .NavTitle,
+  .SubMenu {
+    display: none;
+  }
+}

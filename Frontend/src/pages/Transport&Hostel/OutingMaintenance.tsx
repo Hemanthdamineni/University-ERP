@@ -1,0 +1,1 @@
+export default function OutingMaintenance() { return <div>Outing & Maintenance</div>; } 

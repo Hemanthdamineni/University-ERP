@@ -1,0 +1,1 @@
+export default function ProposeNewEvent() { return <div>Propose New Event</div>; } 

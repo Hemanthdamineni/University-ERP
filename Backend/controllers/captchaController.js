@@ -11,14 +11,16 @@ exports.getCaptcha = async (req, res) => {
     const browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
     await page.goto('https://student.srmap.edu.in/srmapstudentcorner/StudentLoginPage');
-    const captcha = await page.locator('#frmSL').getByRole('img');
-    const captchaPath = path.join(__dirname, '../../Frontend/public/captcha.png');
-    await captcha.screenshot({ path: captchaPath });
+
     // Generate a session ID and store the browser/page
     const sessionId = uuidv4();
     captchaSessions[sessionId] = { browser, page };
-    // Send the captcha image and session ID
-    res.json({ captchaUrl: '/captcha.png?' + Date.now(), sessionId });
+
+    // Get the captcha as a base64-encoded PNG
+    const captchaElement = await page.$('#frmSL img'); // or the correct selector
+    const buffer = await captchaElement.screenshot({ type: 'png' });
+    const base64 = buffer.toString('base64');
+    res.json({ captchaBase64: `data:image/png;base64,${base64}`, sessionId });
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch captcha' });
   }

@@ -1,8 +1,10 @@
+@import "tailwindcss";
+
 /* ===== Light Theme ===== */
 :root {
   /* === Brand / University === */
   --color-primary: #494623;
-  
+
   /* === UI Theme Colors === */
   --color-background: #FFFFFF;
   --color-surface: #F8F7F7;
@@ -19,7 +21,7 @@
   --color-accent-orange: #FFB906;
 
   /* === Fonts === */
-  font-family: 'Roboto', 'Inter';
+  /* font-family: '__Inter_e8ce0c'; */
 
   /* === Status / Feedback (Optional Enhancements) === */
   --color-success: #33A33F;
@@ -56,7 +58,7 @@
   --color-info: #4FC3F7;
 }
 
-/* Mobile devices */ 
+/* Mobile devices */
 /* @media (max-width: 600px) { ... } */
 
 /* Tablets */

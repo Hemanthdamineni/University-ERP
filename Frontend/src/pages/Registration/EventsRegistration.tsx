@@ -1,0 +1,1 @@
+export default function EventsRegistration() { return <div>Events Registration</div>; } 

@@ -1,0 +1,1 @@
+export default function AdvancedAccess() { return <div>Advanced Access</div>; } 

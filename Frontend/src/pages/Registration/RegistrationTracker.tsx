@@ -1,0 +1,1 @@
+export default function RegistrationTracker() { return <div>Registration Tracker</div>; } 
